@@ -1,0 +1,307 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar .title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px 20px 15px;
+  
+}
+.search-bar {
+  margin: 16px 0px 0px 60px;
+}
+.subnav-fixed {
+font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  top: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+  border-color: #D5D5D5;
+  border-width: 0 0 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+  -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+}
+.subnav {
+  width: 100%;
+  height: 36px;
+  background-color: #EEE;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,whiteSmoke), color-stop(100%,#EEE));
+  background-image: -webkit-linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+  background-image: -ms-linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+  background-image: -o-linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+  border: 1px solid #E5E5E5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.subnav-fixed .nav {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 0 1px;
+}
+.noscroll {
+  overflow: hidden !important;
+}
+.board-container {
+  top: 100px;
+  min-width: 940px;
+  width: 1024px;
+  margin: 0 auto;
+  position: absolute;
+}
+.well {
+  margin: 5px 5px 0px 0;
+  display: inline-block;
+  position: absolute;
+  padding: 0px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 1px #000000;
+  -webkit-box-shadow: inset 0 0 1px #000000;
+}
+.well img {
+  max-width: 241px;  
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.zoom-up .well {
+  position: relative;
+  width: 640px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.zoom-up .well img {
+  max-width: 640px;  
+  margin-right: auto;
+  display: block;
+}
+.zoom-up .well .photo {
+  margin-left: auto;
+}
+.well .description {
+  word-wrap: break-word;
+  max-width: 231px;
+  padding: 10px;
+}
+.well .location {
+  z-index: 1000;
+  position: absolute;
+  left: 5px;
+  color: white;
+  font-size: 11px;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+.well .title {
+  z-index: 1000;
+  position: absolute;
+  left: 5px;
+  margin-top: -15px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+.zoom-up .well .zoom-up-photo {
+  padding: 0;
+  overflow-y: auto;
+}
+.zoom-up .well .description {  
+  margin-top: 5px;
+  word-wrap: break-word;
+  max-width: 610px;
+}
+.zoom-up .well .title {
+  margin-left: 5px;
+  margin-top: -105px;
+  position: relative;
+  font-size: 25px;
+  left: 0px;
+}
+.zoom-up .well .location {
+  margin-left: 5px;
+  margin-top: 5px;
+  position: relative;
+  font-size: 12px;
+  left: 0px;
+}
+.zoom-up .well .source {
+  margin-left: 80px;
+  margin-top: 25px;
+}
+.user-icon {  
+  z-index: 1000;
+  margin-top: -20px;
+  margin-left: 10px;
+  width: 60px; 
+  height: 62px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.well.spring {
+  -webkit-transform: scale(.98,.98);
+  -webkit-transition: 0.03s all ease-out;
+  -webkit-perspective: 1000;
+}
+#paginate, #infscr-loading {
+  display: block;
+  margin-top: 10px;
+  padding: 8px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+#zoom-scroll.visible, .modal-container.visible {
+  background-color: rgba(255, 255, 255, 0.93);
+}
+#zoom-scroll.visible, .modal-container.visible {
+  -moz-transition: all 0.22s ease-out;
+  -webkit-transition: all 0.22s ease-out
+}
+#zoom-scroll {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
+  overflow-x: auto;
+  overflow-y: scroll;
+  -webkit-perspective: 1000;
+}
+#zoom-scroll.visible.loaded #zoom-up {
+  position: static;
+  margin: 20px auto;
+  -webkit-transition: 0s all ease-out;
+}
+#zoom-up {
+  top: 110px !important;
+  width: 640px;
+  padding: 20px 30px 0;
+  font-size: 13px;
+  z-index: 2;
+  overflow: hidden;
+}
+.clickable {
+  cursor: pointer;
+}
+#map-view {
+  border-top: 1px solid #DDD;
+  height: 200px;
+}
+.well #zoom-package {
+  float: left;
+  width: 289px;
+  border-right: 2px solid #D1CDCD;
+}
+.well #zoom-by-user {
+  width: 289px;
+  display: inline-block;
+}
+.well #zoom-releated {
+  clear: both;
+}
+.well .trip-info {
+  border-top: 1px solid #D1CDCD;  
+  padding: 20px 10px 10px 20px;
+}
+.well .thumb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.well .thumb img {
+  width: 49px;
+  height: 49px;
+  background-color: #F2F0F0;
+  display: inline-block;
+  border-radius: 0px;
+}
+.modal-container {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0);  
+  -webkit-perspective: 1000;
+  display: none;
+  overflow: scroll;
+  -webkit-transform: translateZ(0);
+}
+.modal.padding-less {
+  padding: 0;
+  border-width: 0;
+}
+.modal .close span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/close.png) top center no-repeat;
+}
+.modal .close {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 57px;
+  background: -webkit-linear-gradient(#FFFCFC, #F0EDED);
+  background: -moz-linear-gradient(#FFFCFC, #F0EDED);
+  background: -o-linear-gradient(#FFFCFC, #F0EDED);
+  background: -webkit-linear-gradient(#FFFCFC, #F0EDED);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcfc', endColorstr='#f0eded');
+  border-left: 1px solid rgba(34, 25, 25, 0.15);
+  box-shadow: inset 0 1px 2px #fff;
+  -moz-box-shadow: inset 0 1px 2px #fff;
+  -webkit-box-shadow: inset 0 1px 2px #fff;
+  text-indent: -9999px;
+}
+.wide {
+  width: 550px;
+}
+.header {
+  padding: 18px 31px 8px;
+  background: -webkit-linear-gradient(#FFFCFC, #F0EDED);
+  border-bottom: 1px solid #CCCACA;
+  position: relative;
+  font-size: 10px;
+}
+.menu .cell {
+  float: left;
+  width: 142px;
+  height: 160px;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #08C;
+  border-left: 2px solid #E1DFDF;
+}
+.menu .cell:first-child {
+  border-left-width: 0;
+}
+a {
+  font-weight: bold;
+  color: #221919;
+  text-decoration: none;
+  outline: none;
+}

@@ -1,0 +1,75 @@
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<body id="trip-catalog">
+  <div id="header">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container" style="max-width: 1200px; min-width: 940px; width: 1024px;">
+          <a class="brand title" href="#">BINzR</a>
+          <form id="searchForm" class="search-query dropdown-toggle search-bar navbar-search pull-left dropdown">
+              <div class="icon-search"></div>
+              <input id="searchText" type="text" class="search-query dropdown-toggle" placeholder="Search">          
+          </form>        
+          <div class="nav pull-right" style="margin-top: 10px">
+            <div class="nav pull-right">
+              <li><a href="#" onclick="AddModalView.show();">Add +</a></li>
+              <li class="divider-vertical"</li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"</li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Signup</a></li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="add-modal" class="modal-container visible">
+    <div class="modal padding-less wide">
+      <div class="header">
+        <a href="#" class="close" onclick="AddModalView.close(); return false;"><span></span></a>
+        <h3>Add</h3>
+      </div>
+      <div class="menu">
+        <a href="#" class="cell">Add a Trip</a>
+        <a href="#" class="cell">Upload a Trip</a>
+        <a href="#" class="cell">Create Trip bundle</a>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="max-width: 1200px; min-width: 940px; width: 1024px;">
+    <header class="jumbotron subhead" id="overview">
+      <div class="subnav subnav-fixed">
+        <ul class="nav nav-pills" style="width: 1024px;">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Shopping</a></li>
+          <li><a href="#">Movie</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Book</a></li>
+          <li><a href="#">Artist</a></li>
+          <li><a href="#">Backpacker</a></li>            
+        </ul>
+      </div> 
+    </header>
+    <div id="stream-container" class="board-container" style="height: 1100px">    
+      <div id="stream-view"></div>      
+      <div id="paginate"></div>
+    </div>    
+  </div>
+  <div id="zoom-scroll-container"></div>
+</body>

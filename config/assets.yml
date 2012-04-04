@@ -1,0 +1,8 @@
+template_function: Handlebars.compile
+template_extension: 'handlebars'
+
+javascripts:
+  templates:
+    - app/assets/javascripts/templates/*.handlebars
+    - app/assets/javascripts/templates/**/*.handlebars
+  
