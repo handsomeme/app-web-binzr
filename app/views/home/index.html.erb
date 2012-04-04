@@ -38,16 +38,52 @@
       </div>
     </div>
   </div>
-  <div id="add-modal" class="modal-container visible">
+  <div id="add-modal" class="modal-container visible" style="margin-bottom: -147px;">
     <div class="modal padding-less wide">
-      <div class="header">
+      <div class="header lg">
         <a href="#" class="close" onclick="AddModalView.close(); return false;"><span></span></a>
         <h3>Add</h3>
       </div>
       <div class="menu">
-        <a href="#" class="cell">Add a Trip</a>
-        <a href="#" class="cell">Upload a Trip</a>
-        <a href="#" class="cell">Create Trip bundle</a>
+        <a href="#" class="cell" onclick="AddModalView.close('add', 'scrap')">Add a Trip</a>
+        <a href="#" class="cell" onclick="AddModalView.close('add', 'upload')">Upload a Trip</a>
+        <a href="#" class="cell" onclick="AddModalView.close('add', 'bundle')">Create a Trip bundle</a>
+      </div>
+    </div>
+  </div>
+  <div id="scrap-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
+    <div class="modal padding-less wide">
+      <div class="header lg">
+        <a href="#" class="close" onclick="AddModalView.close('scrap'); return false;"><span></span></a>
+        <h3>Add a Trip</h3>
+      </div>      
+      <div class="scrap-trip">
+        <a href="#" id="scrap-button" class="pull-right btn btn-large btn-primary">
+          <strong>Find trips</strong>          
+        </a>
+        <input class="input-medium" type="text" placeholder="http://">
+      </div>
+    </div>
+  </div>
+  <div id="upload-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
+    <div class="modal padding-less wide">
+      <div class="header lg">
+        <a href="#" class="close" onclick="AddModalView.close('upload'); return false;"><span></span></a>
+        <h3>Upload a Trip</h3>
+      </div>      
+      <div class="upload-trip">
+        <input class="input-file" id="fileInput" type="file">
+      </div>
+    </div>
+  </div>
+  <div id="bundle-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
+    <div class="modal padding-less wide">
+      <div class="header lg">
+        <a href="#" class="close" onclick="AddModalView.close('bundle'); return false;"><span></span></a>
+        <h3>Create a Trip bundle</h3>
+      </div>      
+      <div class="upload-trip">
+        <input class="input-file" id="fileInput" type="file">
       </div>
     </div>
   </div>
