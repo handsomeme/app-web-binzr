@@ -3,6 +3,7 @@
 trips: 
   columns: 
   - id
+  - title
   - primary_photo
   - description
   - location
