@@ -318,7 +318,7 @@ a {
   height: 22px;
   margin: 0px;
 }
-.scrap-trip, .upload-trip {
+.scrap-trip, .upload-trip, .bundle-trip {
   padding: 20px 40px;
 }
 input[type=text] {
@@ -330,5 +330,16 @@ input[type=text] {
 }
 .upload-trip input[type="file"] {
   font-size: 18px;
+}
+.no-margin {
   margin: 0px;
+}
+.bundle-trip .control-label {
+  font-size: 16px;
+  text-align: left;
+}
+.bundle-trip .control-group {
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(34, 25, 25, 0.1);
+  padding-bottom: 16px;
 }

@@ -72,7 +72,7 @@
         <h3>Upload a Trip</h3>
       </div>      
       <div class="upload-trip">
-        <input class="input-file" id="fileInput" type="file">
+        <input class="input-file no-margin" id="fileInput" type="file">
       </div>
     </div>
   </div>
@@ -82,9 +82,32 @@
         <a href="#" class="close" onclick="AddModalView.close('bundle'); return false;"><span></span></a>
         <h3>Create a Trip bundle</h3>
       </div>      
-      <div class="upload-trip">
-        <input class="input-file" id="fileInput" type="file">
-      </div>
+      <form class="no-margin form-horizontal bundle-trip">
+        <div class="control-group">
+          <label class="control-label" for="input01">Travel Name</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="input01">            
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="input02">Location</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="input02">            
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="select01">Category</label>          
+          <div class="controls">
+            <select id="select01">
+              <option>something</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>        
+        </div>
+      </form>
     </div>
   </div>
   <div class="container" style="max-width: 1200px; min-width: 940px; width: 1024px;">
