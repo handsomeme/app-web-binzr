@@ -47,12 +47,12 @@
       <div class="menu">
         <a href="#" class="cell" onclick="AddModalView.close('add', 'scrap')">Add a Trip</a>
         <a href="#" class="cell" onclick="AddModalView.close('add', 'upload')">Upload a Trip</a>
-        <a href="#" class="cell" onclick="AddModalView.close('add', 'bundle')">Create a Trip bundle</a>
+        <a href="#" class="cell" onclick="AddModalView.close('add', 'board')">Create a Trip board</a>
       </div>
     </div>
   </div>
   <div id="scrap-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
-    <div class="modal padding-less wide">
+    <div class="modal wide">
       <div class="header lg">
         <a href="#" class="close" onclick="AddModalView.close('scrap'); return false;"><span></span></a>
         <h3>Add a Trip</h3>
@@ -63,10 +63,41 @@
         </a>
         <input class="input-medium" type="text" placeholder="http://">
       </div>
+      <div class="trip-bottom">
+        <div class="image-picker">
+          <img src="/img/demo10.jpg" />
+        </div>
+        <div class="trip-form">
+          <div class="board-selector board-picker">
+            <div class="current">
+              <span class="current-board">Cafe/Restaurant Guide For NewYork</span>
+              <span class="down-arrow"></span>
+            </div>
+            <div class="board-list" style="display: none">
+              <ul>
+                <li><span>Little corner store in Kyoto</span></li>
+                <li><span>All about NewYork from local people</span></li>
+                <li><span>London tour with Beatles</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="input-area">
+            <ul class="form fancy-form no-margin">
+              <li class="no-margin-bottom">
+                <textarea class="description-text-area" rows="2" name="caption"></textarea>
+                <label>Describe your trip</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" class="btn btn-danger btn-large"><strong>binzit</strong></a> 
+          </div>
+        </div>        
+      </div>
     </div>
   </div>
   <div id="upload-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
-    <div class="modal padding-less wide">
+    <div class="modal wide">
       <div class="header lg">
         <a href="#" class="close" onclick="AddModalView.close('upload'); return false;"><span></span></a>
         <h3>Upload a Trip</h3>
@@ -74,15 +105,46 @@
       <div class="upload-trip">
         <input class="input-file no-margin" id="fileInput" type="file">
       </div>
+      <div class="trip-bottom">
+        <div class="image-picker">
+          <img src="/img/demo10.jpg" />
+        </div>
+        <div class="trip-form">
+          <div class="board-selector board-picker">
+            <div class="current">
+              <span class="current-board">Cafe/Restaurant Guide For NewYork</span>
+              <span class="down-arrow"></span>
+            </div>
+            <div class="board-list" style="display: none">
+              <ul>
+                <li><span>Little corner store in Kyoto</span></li>
+                <li><span>All about NewYork from local people</span></li>
+                <li><span>London tour with Beatles</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="input-area">
+            <ul class="form fancy-form no-margin">
+              <li class="no-margin-bottom">
+                <textarea class="description-text-area" rows="2" name="caption"></textarea>
+                <label>Describe your trip</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" class="btn btn-danger btn-large"><strong>binzit</strong></a> 
+          </div>
+        </div>        
+      </div>
     </div>
   </div>
-  <div id="bundle-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
-    <div class="modal padding-less wide">
+  <div id="board-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
+    <div class="modal wide">
       <div class="header lg">
-        <a href="#" class="close" onclick="AddModalView.close('bundle'); return false;"><span></span></a>
-        <h3>Create a Trip bundle</h3>
+        <a href="#" class="close" onclick="AddModalView.close('board'); return false;"><span></span></a>
+        <h3>Create a Trip board</h3>
       </div>      
-      <form class="no-margin form-horizontal bundle-trip">
+      <form class="no-margin form-horizontal board-trip">
         <div class="control-group">
           <label class="control-label" for="input01">Travel Name</label>
           <div class="controls">
@@ -90,7 +152,7 @@
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="input02">Location</label>
+          <label class="control-label" for="input02">Where at</label>
           <div class="controls">
             <input type="text" class="input-xlarge" id="input02">            
           </div>
@@ -98,14 +160,34 @@
         <div class="control-group">
           <label class="control-label" for="select01">Category</label>          
           <div class="controls">
-            <select id="select01">
-              <option>something</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+            <div class="board-selector board-picker">
+              <div class="current">
+                <span class="current-board">Cafe/Restaurant Guide For NewYork</span>
+                <span class="down-arrow"></span>
+              </div>
+              <div class="board-list" style="display: none">
+                <ul>
+                  <li><span>Little corner store in Kyoto</span></li>
+                  <li><span>All about NewYork from local people</span></li>
+                  <li><span>London tour with Beatles</span></li>
+                </ul>
+              </div>
+            </div>
           </div>        
+        </div>
+        <div class="ability control-group">
+          <label class="control-label">Who can modify</label>          
+          <div class="controls">            
+            <label class="radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""><span>Just Me</span>
+            </label>
+            <label class="radio last-child">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span>Me + Contributors</span>
+            </label>            
+          </div>
+        </div>
+        <div class="pull-right">
+          <button type="submit" class="btn btn-danger btn-large"><strong>Create a board</strong></button>          
         </div>
       </form>
     </div>
@@ -120,8 +202,7 @@
           <li><a href="#">Food</a></li>
           <li><a href="#">Music</a></li>
           <li><a href="#">Book</a></li>
-          <li><a href="#">Artist</a></li>
-          <li><a href="#">Backpacker</a></li>            
+          <li><a href="#">Artist</a></li>               
         </ul>
       </div> 
     </header>
