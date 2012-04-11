@@ -12,10 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.remotipart
+//= require jquery.form
 //= require bootstrap
 //= require json2
 //= require underscore
 //= require backbone
 //= require icanhaz
 //= require handlebars-1.0.0.beta.6.js
+//= require app
+//= require views
 //= require_tree .

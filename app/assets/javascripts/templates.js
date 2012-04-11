@@ -10,6 +10,88 @@
     <div class="location" style="top: {{locationTop}}px;">{{location}}</div>\
     <div class="description">{{description}}</div>\
   </div>');
+  window.JST["navigation-view"]=Handlebars.compile('\
+  <li><a id="show-add-modal" href="#">Add +</a></li>\
+  <li class="divider-vertical"</li>\
+  <li class="dropdown">\
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About\
+      <b class="caret"></b>\
+    </a>\
+    <ul class="dropdown-menu">\
+      <li><a href="#">Blog</a></li>\
+      <li><a href="#">Help</a></li>\
+      <li><a href="#">Team</a></li>\
+    </ul>\
+  </li>\
+  <li class="divider-vertical"></li>\
+  <li class="dropdown">\
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login\
+      <b class="caret"></b>\
+    </a>\
+    <ul class="dropdown-menu">\
+      <li><a href="#">Signup</a></li>\
+    </ul>\
+  </li>\
+  ');
+  window.JST["add-modal-view"]=Handlebars.compile('\
+  <div class="header lg">\
+    <a href="#" class="close"><span></span></a>\
+    <h3>Add</h3>\
+  </div>\
+  <div class="menu">\
+    <a href="#" class="cell" id="add-trip">Add a Trip</a>\
+    <a href="#" class="cell" id="upload-trip">Upload a Trip</a>\
+    <a href="#" class="cell" id="create-board">Create a Trip board</a>\
+  </div>\
+  ');
+  window.JST["photo-form"]=Handlebars.compile('\
+  <form accept-charset="UTF-8" action="/photo" class="new_photo" data-remote="true" data-type="json" enctype="multipart/form-data" method="post">\
+    <input name="authenticity_token" type="hidden"/>\
+    <div style="margin:0;padding:0;display:inline">\
+        <input name="utf8" type="hidden" value="✓"/>\
+    </div>\
+    <input name="photo" id="fileInput" type="file" class="input-file no-margin" />\
+    <div class="photos"></div>\
+  </form>\
+  ');
+  window.JST["upload-trip-modal-view"]=Handlebars.compile('\
+  <div class="header lg">\
+    <a href="#" class="close"><span></span></a>\
+    <h3>Upload a Trip</h3>\
+  </div>\
+  <div class="upload-trip"></div>\
+  <div class="trip-bottom" style="display: none;">\
+    <div class="image-picker">\
+      <img src="/img/demo10.jpg" />\
+    </div>\
+    <div class="trip-form">\
+      <div class="board-selector board-picker">\
+        <div class="current">\
+          <span class="current-board">Cafe/Restaurant Guide For NewYork</span>\
+          <span class="down-arrow"></span>\
+        </div>\
+        <div class="board-list" style="display: none">\
+          <ul>\
+            <li><span>Little corner store in Kyoto</span></li>\
+            <li><span>All about NewYork from local people</span></li>\
+            <li><span>London tour with Beatles</span></li>\
+          </ul>\
+        </div>\
+      </div>\
+      <div class="input-area">\
+        <ul class="form fancy-form no-margin">\
+          <li class="no-margin-bottom">\
+            <textarea class="description-text-area" rows="2" name="caption"></textarea>\
+            <label>Describe your trip</label>\
+          </li>\
+        </ul>\
+      </div>\
+      <div>\
+        <a href="#" class="btn btn-danger btn-large"><strong>binzit</strong></a>\
+      </div>\
+    </div>\
+  </div>\
+  ');  
   window.JST["zoom-up-view"]=Handlebars.compile('\
   <div id="zoom-scroll">\
     <div id="zoom-up" class="zoom-up hide">\

@@ -9,48 +9,13 @@
               <div class="icon-search"></div>
               <input id="searchText" type="text" class="search-query dropdown-toggle" placeholder="Search">          
           </form>        
-          <div class="nav pull-right" style="margin-top: 10px">
-            <div class="nav pull-right">
-              <li><a href="#" onclick="AddModalView.show();">Add +</a></li>
-              <li class="divider-vertical"</li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Team</a></li>
-                </ul>
-              </li>
-              <li class="divider-vertical"</li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Signup</a></li>
-                </ul>
-              </li>
-            </div>
+          <div id="navigation" class="nav pull-right" style="margin-top: 10px">            
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="add-modal" class="modal-container visible" style="margin-bottom: -147px;">
-    <div class="modal padding-less wide">
-      <div class="header lg">
-        <a href="#" class="close" onclick="AddModalView.close(); return false;"><span></span></a>
-        <h3>Add</h3>
-      </div>
-      <div class="menu">
-        <a href="#" class="cell" onclick="AddModalView.close('add', 'scrap')">Add a Trip</a>
-        <a href="#" class="cell" onclick="AddModalView.close('add', 'upload')">Upload a Trip</a>
-        <a href="#" class="cell" onclick="AddModalView.close('add', 'board')">Create a Trip board</a>
-      </div>
-    </div>
-  </div>
+  <div id="add-modal" class="modal-container visible" style="margin-bottom: -147px;"></div>    
   <div id="scrap-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
     <div class="modal wide">
       <div class="header lg">
@@ -96,48 +61,7 @@
       </div>
     </div>
   </div>
-  <div id="upload-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
-    <div class="modal wide">
-      <div class="header lg">
-        <a href="#" class="close" onclick="AddModalView.close('upload'); return false;"><span></span></a>
-        <h3>Upload a Trip</h3>
-      </div>      
-      <div class="upload-trip">
-        <input class="input-file no-margin" id="fileInput" type="file">
-      </div>
-      <div class="trip-bottom">
-        <div class="image-picker">
-          <img src="/img/demo10.jpg" />
-        </div>
-        <div class="trip-form">
-          <div class="board-selector board-picker">
-            <div class="current">
-              <span class="current-board">Cafe/Restaurant Guide For NewYork</span>
-              <span class="down-arrow"></span>
-            </div>
-            <div class="board-list" style="display: none">
-              <ul>
-                <li><span>Little corner store in Kyoto</span></li>
-                <li><span>All about NewYork from local people</span></li>
-                <li><span>London tour with Beatles</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="input-area">
-            <ul class="form fancy-form no-margin">
-              <li class="no-margin-bottom">
-                <textarea class="description-text-area" rows="2" name="caption"></textarea>
-                <label>Describe your trip</label>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <a href="#" class="btn btn-danger btn-large"><strong>binzit</strong></a> 
-          </div>
-        </div>        
-      </div>
-    </div>
-  </div>
+  <div id="upload-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;"></div>
   <div id="board-trip-modal" class="modal-container visible" style="margin-bottom: -180.5px;">
     <div class="modal wide">
       <div class="header lg">
