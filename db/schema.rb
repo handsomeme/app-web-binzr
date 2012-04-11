@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120328093254) do
 
   create_table "trips", :force => true do |t|
+    t.string   "title"
     t.string   "primary_photo"
     t.text     "description"
     t.string   "location"

@@ -1,6 +1,6 @@
 Binzr::Application.routes.draw do
   resources :trips
-
+  resource :scrap, :only => [:create]
   root :to => "home#index"
 
   # The priority is based upon order of creation:
