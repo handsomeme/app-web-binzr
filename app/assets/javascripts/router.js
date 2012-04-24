@@ -1,6 +1,6 @@
 app.Router = Backbone.Router.extend({
   routes: {
-    "/": "board",
+    "/": "streamView",
     "zoomUp/:id": "zoomUp"
   },
   streamView: function() {
@@ -30,5 +30,11 @@ app.Router = Backbone.Router.extend({
     var modalView = new app.views.UploadTripModalView({node: node}).render();
     node.html(modalView.el);
     return modalView;    
+  },
+  scrapTripModalView: function() {
+    var node = $("#scrap-trip-modal");
+    var modalView = new app.views.ScrapTripModalView({node: node}).render();
+    node.html(modalView.el);
+    return modalView;
   }
 });

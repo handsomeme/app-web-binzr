@@ -3,10 +3,12 @@ class TripsController < ApplicationController
   # GET /trips.json
   def index
     limit = params[:max] ? params[:max].to_i : 16
-    offset = params[:offset] ? params[:offset].to_i : 0
+    page = params[:page] ? params[:page].to_i : 0
         
-    @trips = Trip.all(:limit => limit, :offset => offset)
-    sleep 1
+    @trips = Trip.paginate({:order    => :_id.desc,
+                            :per_page => limit, 
+                            :page     => page})
+    sleep(1)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @trips }
@@ -34,10 +36,6 @@ class TripsController < ApplicationController
       format.json { render json: @trip }
     end
   end
-
-  def post
-    put("post!!!!")
-  end
   
   # GET /trips/1/edit
   def edit
@@ -47,8 +45,12 @@ class TripsController < ApplicationController
   # POST /trips
   # POST /trips.json
   def create
+    photo = Photo.find(params[:trip][:photo_id])
     @trip = Trip.new(params[:trip])
-
+    @trip.image_url = photo.url
+    @trip.width = photo.width
+    @trip.height = photo.height
+    
     respond_to do |format|
       if @trip.save
         format.html { redirect_to @trip, notice: 'Trip was successfully created.' }

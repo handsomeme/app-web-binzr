@@ -23,10 +23,13 @@ app.forms.Photo = app.forms.Base.extend({
   photoUploaded: function(e, xhr) {
     resp = JSON.parse(xhr.responseText)
     if (resp.success) {
-      this.model = new Backbone.Model({"photo_url": resp.data})
+      this.model = new Backbone.Model(resp.data)
       this.trigger("photoUploaded", this);
     } else {
       alert("Upload failed! Please try again");
     }
+  },
+  reset: function() {
+    this.$("input[name='photo']").val('');
   }
 })

@@ -10,19 +10,24 @@ app.views.AddModalView = app.views.Base.extend({
   initialize: function(options) {
     this.node = options.node;
     this.uploadTripModalView = app.router.uploadTripModalView();
+    this.scrapTripModalView = app.router.scrapTripModalView();
   },
   show: function(e) {
     if (e) { e.preventDefault(); }    
+    $('#trip-catalog').addClass('noscroll');
     this.node.css("display", "block");
     this.node.css("-webkit-transform", "none");    
   },
   close: function(e) {
     if (e) { e.preventDefault(); }    
+    $('#trip-catalog').removeClass('noscroll');
     this.node.css("display", "none");
     this.node.css("-webkit-transform", "translateZ(0)");
   },  
   showScrabTripModal: function(e) {
     if (e) { e.preventDefault(); }        
+    this.close();
+    this.scrapTripModalView.show();
   },
   showUploadTripModal: function(e) {
     if (e) { e.preventDefault(); }  

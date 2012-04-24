@@ -1,4 +1,6 @@
 Binzr::Application.routes.draw do
+  resources :users
+
   resources :trips
   resource :scrap, :only => [:create]
   resource :photo, :only => [:create]

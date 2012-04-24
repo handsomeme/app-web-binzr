@@ -55,7 +55,7 @@ app.views.Trip = app.views.Base.extend({
       title: this.model.get('title'),
       location: this.model.get('location'),
       description: this.model.get('description'),
-      primary_photo: this.model.get('primary_photo'),
+      primary_photo: this.model.get('image_url'),
       x: this.left(),
       w: width,
       top: this.top,

@@ -54,6 +54,23 @@
     <div class="photos"></div>\
   </form>\
   ');
+  window.JST["dropdown-list"]=Handlebars.compile('\
+  <div class="current">\
+    <span class="current-board"></span>\
+    <span class="down-arrow"></span>\
+  </div>\
+  <div class="board-list" style="display: none">\
+    <div class="wrapper">\
+      <ul class="list"></ul>\
+      <div class="create-board" style="display: none">\
+        <input type="text" value="Create New Bundle">\
+        <a href="#" class="btn create">\
+          <strong>Create</strong><span></span>\
+        </a>\
+      </div>\
+    </div>\
+  </div>\
+  ');
   window.JST["upload-trip-modal-view"]=Handlebars.compile('\
   <div class="header lg">\
     <a href="#" class="close"><span></span></a>\
@@ -61,23 +78,40 @@
   </div>\
   <div class="upload-trip"></div>\
   <div class="trip-bottom" style="display: none;">\
+    <div class="image-picker"></div>\
+    <div class="trip-form">\
+      <div class="board-selector board-picker"></div>\
+      <div class="input-area">\
+        <ul class="form fancy-form no-margin">\
+          <li class="no-margin-bottom">\
+            <textarea class="description-text-area" rows="2" name="caption"></textarea>\
+            <label>Describe your trip</label>\
+          </li>\
+        </ul>\
+      </div>\
+      <div>\
+        <a href="#" class="btn btn-danger btn-large binzit"><strong>binzit</strong></a>\
+      </div>\
+    </div>\
+  </div>\
+  ');  
+  window.JST["scrap-trip-modal-view"]=Handlebars.compile('\
+  <div class="header lg">\
+    <a href="#" class="close"><span></span></a>\
+    <h3>Scrap a Trip</h3>\
+  </div>\
+  <div class="scrap-trip">\
+    <a href="#" id="scrap-button" class="pull-right btn btn-large btn-primary">\
+      <strong>Find trips</strong>\
+    </a>\
+    <input class="input-medium" type="text" placeholder="http://">\
+  </div>\
+  <div class="trip-bottom">\
     <div class="image-picker">\
       <img src="/img/demo10.jpg" />\
     </div>\
     <div class="trip-form">\
-      <div class="board-selector board-picker">\
-        <div class="current">\
-          <span class="current-board">Cafe/Restaurant Guide For NewYork</span>\
-          <span class="down-arrow"></span>\
-        </div>\
-        <div class="board-list" style="display: none">\
-          <ul>\
-            <li><span>Little corner store in Kyoto</span></li>\
-            <li><span>All about NewYork from local people</span></li>\
-            <li><span>London tour with Beatles</span></li>\
-          </ul>\
-        </div>\
-      </div>\
+      <div class="board-selector board-picker"></div>\
       <div class="input-area">\
         <ul class="form fancy-form no-margin">\
           <li class="no-margin-bottom">\
@@ -91,14 +125,14 @@
       </div>\
     </div>\
   </div>\
-  ');  
+  ');
   window.JST["zoom-up-view"]=Handlebars.compile('\
   <div id="zoom-scroll">\
     <div id="zoom-up" class="zoom-up hide">\
       <div class="well">\
         <div class="zoom-up-photo">\
           <div>\
-            <img class="photo" src="{{primary_photo}}" />\
+            <img class="photo" src="{{image_url}}" />\
           </div>\
           <div style="margin-right: 10px">\
             <img class="user-icon" src="/img/icon.jpg" />\

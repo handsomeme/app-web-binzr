@@ -13,7 +13,7 @@ app.views.ZoomUp = app.views.Base.extend({
       title: this.model.get('title'),
       location: this.model.get('location'),
       description: this.model.get('description'),
-      primary_photo: this.model.get('primary_photo')
+      image_url: this.model.get('image_url')
     }));
     return this;
   },

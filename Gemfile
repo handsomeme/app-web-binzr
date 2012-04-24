@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'http://gemcutter.org'
 
 gem 'rails', '3.2.2'
 
@@ -10,6 +11,22 @@ gem 'yaml_db'
 gem 'mysql2'
 gem 'nokogiri'
 gem "remotipart", "~> 1.0"
+
+# Photo upload
+gem 'carrierwave', '0.5.8'
+gem 'fog'
+gem 'fastercsv', '1.5.4', :require => false
+gem 'mini_magick', '3.4'
+gem 'rest-client', '1.6.7'
+gem "mm-carrierwave", "~> 0.0.2"
+
+# Mongo driver
+gem 'bson_ext'
+gem 'mongo_mapper'
+
+# JSON and API
+gem 'json'
+gem 'acts_as_api'
 
 # Gems used only for assets and not required
 # in production environments by default.

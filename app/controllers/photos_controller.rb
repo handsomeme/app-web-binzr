@@ -3,14 +3,17 @@ class PhotosController < ApplicationController
   
   def create    
     if remotipart_submitted?
-      photo = params[:photo]
-      File.open(Rails.root.join('public', 'img', photo.original_filename), 'w') do |file|
-        file.binmode
-        file.write(photo.read)
-      end    
-      render :json => {"success" => true, "data" => photo.original_filename}
+      @photo = Photo.new(:photo => params[:photo])
+      # puts @photo.inspect
+      @photo.save
+      render :json => {:success => true,
+                       :data => { :photo_id => @photo.id,
+                                  :image_url => @photo.url,
+                                  :image_url_medium => @photo.url(:thumb_medium),
+                                  :image_url_small => @photo.url(:thumb_small)}
+                      }
     else
-      render :json => {"success" => false, "data" => photo.original_filename}
+      render :json => {"success" => false, "data" => @photo.image_path}
     end
   end
 end

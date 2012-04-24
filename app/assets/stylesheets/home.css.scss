@@ -245,6 +245,9 @@ font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
   overflow: scroll;
   -webkit-transform: translateZ(0);
 }
+.upload-trip-modal-view.modal {
+  overflow: visible;
+}
 .modal {
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -432,8 +435,6 @@ input[type=text] {
   max-height: 300px;
   background-color: white;
   border: 1px solid #AAA;
-  overflow-x: hidden;
-  overflow-y: auto;
   box-shadow: 0 0 17px #bbb;
   -moz-box-shadow: 0 0 17px #bbb;
   -webkit-box-shadow: 0 0 17px #bbb;
@@ -527,4 +528,70 @@ input[type=text] {
 }
 .modal .input-xlarge {
   min-width: 365px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.board-list li:hover { 
+  color: #221919; 
+  background-color: #ebe8e8;
+}
+.board-list li:active {
+  color: #fff; 
+  background-color: #cb2027; 
+  text-shadow: none;
+}
+.board-picker:hover {
+  background-color: #ebe8e8; 
+  background: -moz-linear-gradient(#f9f6f6, #ebe8e8); 
+  background: -o-linear-gradient(#f9f6f6, #ebe8e8); 
+  background: -webkit-linear-gradient(#f9f6f6, #ebe8e8); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f6f6', endColorstr='#ebe8e8'); 
+  border-color: #bfbdbd;
+}
+.board-picker:active {
+  background-color: #c21f24; 
+  background: -moz-linear-gradient(#d62228, #c21f24); 
+  background: -o-linear-gradient(#d62228, #c21f24); 
+  background: -webkit-linear-gradient(#d62228, #c21f24); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d62228', endColorstr='#c21f24'); 
+  border-color: #510000; 
+  box-shadow: inset 0 1px 1px rgba(34,25,25,0.5), 0 2px 2px white; 
+  -moz-box-shadow: inset 0 1px 1px rgba(34,25,25,0.5), 0 2px 2px white; 
+  -webkit-box-shadow: inset 0 1px 1px rgba(34,25,25,0.5), 0 2px 2px white;
+}
+.board-picker:active .current-board {
+  color: #fff;
+}
+.board-picker:hover .down-arrow {
+  background-position: center;
+}
+.board-picker:active .down-arrow {
+  background-position: center bottom;
+}
+.board-picker .create-board, .board-picker .create-category {
+  padding: 8px;
+  background-color: #F2F0F0;
+  border-top: 1px solid #CCCACA;
+  border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  cursor: default;
+}
+.board-picker .create-board input, .board-picker .create-category input {
+  margin: 0 6px 0 0;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: inset 0 1px rgba(34,25,25,0.15), 0 1px rgba(255,255,255,0.8);
+  -moz-box-shadow: inset 0 1px rgba(34,25,25,0.15), 0 1px rgba(255,255,255,0.8);
+  -webkit-box-shadow: inset 0 1px rgba(34,25,25,0.15), 0 1px rgba(255,255,255,0.8);
+  -webkit-transition: all 0.08s ease-in-out;
+  -moz-transition: all 0.08s ease-in-out;
+}
+.wrapper {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

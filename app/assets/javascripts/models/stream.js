@@ -1,6 +1,7 @@
 app.models.Stream = Backbone.Collection.extend({
   initialize: function() {
     this.trips = new app.collections.Trips();
+    this.currentPage = 1;
   },
   url: function() {
     return _.any(this.trips.models) ? this.limitOffsetFilteredPath() : this.trips.url;
@@ -9,7 +10,7 @@ app.models.Stream = Backbone.Collection.extend({
   fetch: function() {
     if (this.fetching_) { return false; }
     var self = this;
-    
+
     // we're fetching the collection...
     self.fetching_ = true;
     this.trips
@@ -21,6 +22,7 @@ app.models.Stream = Backbone.Collection.extend({
         function(resp) {
           // we're done fetching
           self.fetching_ = false;
+          self.currentPage++;
           self.trigger("fetched", self);          
           if (resp && resp.length == 0) {
             self.trigger("allTripsLoaded", self);
@@ -30,7 +32,7 @@ app.models.Stream = Backbone.Collection.extend({
     return this;
   },
   limitOffsetFilteredPath: function() {
-    return this.trips.url + "?offset=" + (this.trips.models.length) + "&limit=16";
+    return this.trips.url + "?page=" + this.currentPage + "&limit=16";
   },
   basePath : function() {
     return document.location.pathname;
