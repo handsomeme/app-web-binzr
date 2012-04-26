@@ -4,7 +4,6 @@ class PhotosController < ApplicationController
   def create    
     if remotipart_submitted?
       @photo = Photo.new(:photo => params[:photo])
-      # puts @photo.inspect
       @photo.save
       render :json => {:success => true,
                        :data => { :photo_id => @photo.id,

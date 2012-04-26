@@ -2,7 +2,7 @@ Binzr::Application.routes.draw do
   resources :users
 
   resources :trips
-  resource :scrap, :only => [:create]
+  resource :scrap, :only => [:show]
   resource :photo, :only => [:create]
   root :to => "home#index"
 

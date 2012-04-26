@@ -38,10 +38,19 @@
     <a href="#" class="close"><span></span></a>\
     <h3>Add</h3>\
   </div>\
-  <div class="menu">\
-    <a href="#" class="cell" id="add-trip">Add a Trip</a>\
-    <a href="#" class="cell" id="upload-trip">Upload a Trip</a>\
-    <a href="#" class="cell" id="create-board">Create a Trip board</a>\
+  <div class="menu" id="add-modal">\
+    <a href="#" class="cell" id="add-trip">\
+      <div class="icon" id="scrap"></div>\
+      <span>Add a Trip</span>\
+    </a>\
+    <a href="#" class="cell" id="upload-trip">\
+      <div class="icon" id="upload"></div>\
+      <span>Upload a Trip</span>\
+    </a>\
+    <a href="#" class="cell" id="create-board">\
+      <div class="icon" id="board"></div>\
+      <span>Create a Trip board</span>\
+    </a>\
   </div>\
   ');
   window.JST["photo-form"]=Handlebars.compile('\
@@ -106,9 +115,12 @@
     </a>\
     <input class="input-medium" type="text" placeholder="http://">\
   </div>\
-  <div class="trip-bottom">\
-    <div class="image-picker">\
-      <img src="/img/demo10.jpg" />\
+  <div class="trip-bottom" style="display: none;">\
+    <div id="scrap-image" class="image-picker carousel">\
+      <div class="carousel-inner">\
+      </div>\
+      <a class="carousel-control left" href="#scrap-image" data-slide="prev">&lsaquo;</a>\
+      <a class="carousel-control right" href="#scrap-image" data-slide="next">&rsaquo;</a>\
     </div>\
     <div class="trip-form">\
       <div class="board-selector board-picker"></div>\
@@ -121,7 +133,7 @@
         </ul>\
       </div>\
       <div>\
-        <a href="#" class="btn btn-danger btn-large"><strong>binzit</strong></a>\
+        <a href="#" class="btn btn-danger btn-large binzit"><strong>binzit</strong></a>\
       </div>\
     </div>\
   </div>\
@@ -132,7 +144,13 @@
       <div class="well">\
         <div class="zoom-up-photo">\
           <div>\
+            {{#if link}}\
+            <a href="{{link}}" target="_blank">\
+            {{/if}}\
             <img class="photo" src="{{image_url}}" />\
+            {{#if link}}\
+            </a>\
+            {{/if}}\
           </div>\
           <div style="margin-right: 10px">\
             <img class="user-icon" src="/img/icon.jpg" />\

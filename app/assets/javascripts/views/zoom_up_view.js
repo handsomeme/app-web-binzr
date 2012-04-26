@@ -2,7 +2,7 @@ app.views.ZoomUp = app.views.Base.extend({
   className: "zoom-up-view",
   templateName: "zoom-up-view",
   events: {
-    "click #zoom-scroll.visible": "destroy"
+    "click #zoom-scroll.visible": "destroy"    
   },
   initialize: function() {   
   },
@@ -13,7 +13,8 @@ app.views.ZoomUp = app.views.Base.extend({
       title: this.model.get('title'),
       location: this.model.get('location'),
       description: this.model.get('description'),
-      image_url: this.model.get('image_url')
+      image_url: this.model.get('image_url'),
+      link: this.model.get('link')
     }));
     return this;
   },
@@ -40,6 +41,6 @@ app.views.ZoomUp = app.views.Base.extend({
     $('#zoom-scroll').addClass('visible');
     $('#zoom-scroll').addClass('loaded');
     $('#zoom-up').removeClass('hide'); 
-    this.showGoogleMap();
+    // this.showGoogleMap();
   }
 })

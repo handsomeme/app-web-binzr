@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class TripsController < ApplicationController
   # GET /trips
   # GET /trips.json
@@ -45,7 +47,14 @@ class TripsController < ApplicationController
   # POST /trips
   # POST /trips.json
   def create
-    photo = Photo.find(params[:trip][:photo_id])
+    photo_id = params[:trip][:photo_id]
+    if photo_id.nil?
+      photo = Photo.new(:photo => open(params[:trip][:image_url]))
+      photo.save
+    else
+      photo = Photo.find(params[:trip][:photo_id])
+    end
+    
     @trip = Trip.new(params[:trip])
     @trip.image_url = photo.url
     @trip.width = photo.width

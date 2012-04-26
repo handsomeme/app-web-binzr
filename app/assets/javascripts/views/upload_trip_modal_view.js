@@ -69,7 +69,8 @@ app.views.UploadTripModalView = app.views.Base.extend({
                 }, 
                 error: function() { 
                   alert("Failed to create new trip"); 
-                  self.close(); }
+                  self.close(); 
+                }
               });    
   }
 })
